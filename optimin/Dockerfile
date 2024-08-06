@@ -19,6 +19,7 @@ RUN cd /optimin/build &&        \
 
 # Build EvalMaxSAT
 RUN git clone https://github.com/FlorentAvellaneda/EvalMaxSAT
+RUN cd EvalMaxSAT && git checkout 440bf90edf88f6ab940934129e3c5b3b93764295  && cd ..
 RUN mkdir -p EvalMaxSAT/build
 RUN cd EvalMaxSAT/build &&      \
     cmake .. &&                 \
